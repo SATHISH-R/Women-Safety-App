@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddMobile">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageButton
+            android:id="@+id/back_at_add"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/back"
+            android:tint="@color/text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@+id/back_at_add"
+            android:gravity="center"
+            android:text="Women Safety"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorPrimary"
+            android:src="@mipmap/ic_launcher_round" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/arbutus_slab"
+                android:gravity="center"
+                android:text="Add Mobile"
+                android:textAllCaps="true"
+                android:textColor="@color/text"
+                android:layout_marginBottom="20dp"
+                android:textSize="40dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:textColorHint="@color/text"
+                app:boxStrokeColor="@color/text"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/text"
+                app:hintTextColor="@color/text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/add_name"
+                    android:textColor="@color/text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/add_countryCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_showNameCode="true"
+                app:ccp_showFullName="true"
+                android:padding="7dp"
+                app:ccp_textGravity="LEFT"
+                app:ccpDialog_backgroundColor="@color/background"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mobile No."
+                android:textColorHint="@color/text"
+                app:boxStrokeColor="@color/text"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/text"
+                app:hintTextColor="@color/text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="phone"
+                    android:paddingLeft="10dp"
+                    android:maxLength="10"
+                    android:id="@+id/add_mobile"
+                    android:textColor="@color/text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/add_alert_mobile"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_background"
+                android:elevation="1dp"
+                android:text="Add Mobile"
+                android:textAllCaps="true"
+                android:textColor="@color/text"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
